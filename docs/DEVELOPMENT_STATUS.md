@@ -4,8 +4,8 @@
 
 - [x] GitHub repository created: `vkabarguine/HiddenForest`
 - [x] Repository access verified through the connected GitHub integration.
-- [ ] Initial application scaffold
-- [ ] Local development environment
+- [x] Initial application scaffold committed (FastAPI, Next.js, CI, tests; not yet validated by CI)
+- [x] Local development instructions added (execution not yet verified)
 - [ ] Social API proof of concept
 - [ ] Media inventory
 - [ ] AI processing workflow
@@ -41,6 +41,9 @@ The platform is for Hidden Forest Studio (https://hiddenforeststudio.com), Jane 
 ## Change log
 
 ### 2026-11-02
+- Committed first application scaffold: API endpoints, frontend dashboard, backend tests, CI workflow, and local setup instructions.
+- No social accounts are connected, and the application is not deployed. GitHub CI results remain to be checked.
+
 - Created initial product specification, architecture proposal, roadmap, and API integration plan.
 - Clarified the product is for Jane Kabarguina's Hidden Forest Studio business, not a "Hidden Forest Method".
 - Recorded online hosting preference subject to cost, link-first media inventory, explicit publishing approval, and deferred Facebook account details.
