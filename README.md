@@ -54,3 +54,9 @@ The implementation scaffold and local setup instructions will be added after the
 ## Project status
 
 Early planning. The repository currently contains the initial product documentation; implementation has not started.
+
+## Run the scaffold locally
+
+See [Local development instructions](docs/LOCAL_DEVELOPMENT.md). The frontend uses the FastAPI backend on port 8000. No external accounts or API credentials are needed yet.
+
+**Security:** This scaffold has no login or persistent database. Do not deploy it as a publicly accessible application until authentication and production controls are added.
