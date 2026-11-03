@@ -7,6 +7,8 @@
 - Preserve source records and processing history.
 - Make human approval a first-class part of the publishing workflow.
 - Start with a modular monolith; split services only when operational evidence justifies it.
+- Optimize for low-cost online hosting, with local development and a simple deployment path.
+- Keep original media out of managed storage by default; store source links, metadata, and authorized derived text.
 
 ## 2. Proposed components
 
@@ -90,7 +92,7 @@ Separate interfaces for:
 Store provider/model identifiers and relevant processing settings with generated outputs. Never couple domain models to a single vendor's response schema.
 
 ### Media storage
-Store durable object keys and metadata in the database. Use signed, short-lived URLs for browser access. Keep originals immutable; derived media should be separate assets with lineage.
+For the initial release, store platform URLs, source IDs, metadata, and authorized transcripts or derived text in the database. Do not automatically download or store original videos. Object storage is optional for future owner-provided uploads or authorized derivatives; if introduced, use signed short-lived URLs and preserve lineage.
 
 ## 4. Key domain flows
 
@@ -103,7 +105,7 @@ Store durable object keys and metadata in the database. Use signed, short-lived 
 6. Record pagination cursors and sync outcomes.
 
 ### AI processing
-1. Worker obtains authorized media input.
+1. Worker checks whether authorized captions, transcript, or media input are available; a URL alone does not grant media download or transcription access.
 2. Probe media and extract audio as needed.
 3. Transcribe and analyze.
 4. Save transcript and generated suggestions with provenance.
@@ -167,4 +169,4 @@ This layout is a target, not a requirement to create every directory before its 
 
 ## 8. Deployment evolution
 
-Start with Docker Compose for local development (API, worker, PostgreSQL, Redis, frontend). Choose production hosting, object storage, secrets management, backups, and monitoring after the deployment/privacy requirements are decided.
+Prefer cost-conscious online hosting for the application, while retaining Docker Compose for local development. Evaluate monthly base costs, database, worker requirements, storage, secrets management, backups, and usage-based AI/API expenses before selecting a provider. Avoid running Redis/Celery or object storage until workload justifies their operating cost.
