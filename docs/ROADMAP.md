@@ -4,12 +4,12 @@ This roadmap is intentionally milestone-driven. Each phase should end with a wor
 
 ## Phase 0 — Validate the foundations
 
-- [ ] Confirm target YouTube channel(s) and Facebook Page(s).
+- [ ] Confirm target YouTube channel(s); defer deciding the Facebook account surface until the owner provides details.
 - [ ] Determine which account owner can authorize each integration.
 - [ ] Create developer app(s) and review current official API requirements.
 - [ ] Validate OAuth, available scopes, quotas, and content/analytics endpoints.
-- [ ] Decide local/private versus hosted first deployment.
-- [ ] Record what media can be referenced, downloaded, or must be uploaded manually.
+- [ ] Compare affordable online hosting options and choose a provider only after estimating recurring costs.
+- [ ] Inventory content by links and metadata first; document whether authorized captions or other inputs are available without downloading video files.
 
 **Exit:** a written integration capability matrix and a small proof of concept that can list permitted account/content metadata.
 
@@ -28,7 +28,7 @@ This roadmap is intentionally milestone-driven. Each phase should end with a wor
 ## Phase 2 — Account connections and media catalog
 
 - [ ] Implement YouTube adapter for authorized inventory reads.
-- [ ] Implement the supported Facebook Page inventory reads.
+- [ ] Implement Facebook inventory only after the exact account surface and permitted API capabilities are confirmed.
 - [ ] Build OAuth connection/disconnection screens.
 - [ ] Implement paginated, resumable sync jobs.
 - [ ] Add normalized media source and asset records.
@@ -39,7 +39,7 @@ This roadmap is intentionally milestone-driven. Each phase should end with a wor
 
 ## Phase 3 — AI content studio
 
-- [ ] Add media probing and audio extraction.
+- [ ] Add authorized transcript/caption ingestion first; media probing or audio extraction only for owner-provided or otherwise permitted media.
 - [ ] Add transcription provider interface and first provider.
 - [ ] Store timestamped transcripts.
 - [ ] Generate summaries, topics, titles, descriptions, chapters, and tags.
@@ -54,7 +54,7 @@ This roadmap is intentionally milestone-driven. Each phase should end with a wor
 - [ ] Validate official publishing support for each target platform/content type.
 - [ ] Implement capability-aware publishing adapters.
 - [ ] Add calendar and scheduling workflow.
-- [ ] Require explicit approval.
+- [ ] Require explicit approval for every publication, including scheduled jobs.
 - [ ] Add job idempotency, retries, and uncertain-result reconciliation.
 - [ ] Store remote post IDs and URLs.
 - [ ] Add publish history and failure recovery.
@@ -66,6 +66,7 @@ This roadmap is intentionally milestone-driven. Each phase should end with a wor
 - [ ] Import available channel/page and post metrics.
 - [ ] Store timestamped metric snapshots.
 - [ ] Build performance dashboard and filters.
+- [ ] Identify measurable Hidden Forest Studio outcomes: awareness, website visits, class/workshop interest, and inquiries.
 - [ ] Compare content themes and formats where data is comparable.
 - [ ] Generate evidence-linked recommendations.
 - [ ] Track whether recommendations were accepted and their outcomes.
