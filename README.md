@@ -2,11 +2,12 @@
 
 An AI-assisted content operations platform for managing, understanding, adapting, publishing, and improving social media content across platforms.
 
-The initial focus is the existing video library associated with **Jane Kabarguina** on YouTube and Facebook. The product will start as a private creator workflow, with a modular architecture that can grow into a multi-account platform.
+The platform is built for **Hidden Forest Studio**, the business where Jane Kabarguina offers lessons, classes, and workshops. Business website: https://hiddenforeststudio.com. Initial social sources include Jane's YouTube and Facebook content; the exact Facebook account type is still to be confirmed. This is a business-specific application, not a generic creator SaaS product.
 
 ## Product goals
 
-- Inventory and organize existing media and published content.
+- Inventory and organize existing media and published content using links and metadata first, without storing copies of original videos by default.
+- Support studio awareness, interest in classes and workshops, website visits, and inquiries, subject to measurable data.
 - Transcribe and analyze videos, then generate accurate titles, descriptions, chapters, captions, and platform-specific post variants.
 - Let a human review and approve content before publication.
 - Schedule and publish through supported official platform APIs.
@@ -30,7 +31,7 @@ The initial focus is the existing video library associated with **Jane Kabarguin
 - Frontend: Next.js and TypeScript
 - Media processing: FFmpeg
 - Object storage: S3-compatible storage
-- Deployment: Docker Compose for local development; production target to be selected later
+- Deployment: prefer cost-conscious online hosting; compare operating costs before selecting a provider. Local development remains supported.
 
 These are initial recommendations, not irreversible decisions. See [Architecture](docs/ARCHITECTURE.md).
 
@@ -44,7 +45,7 @@ These are initial recommendations, not irreversible decisions. See [Architecture
 
 ## First milestone
 
-Validate access to the existing YouTube and Facebook accounts, inventory available media and metadata, and produce a reviewable content catalog. Do not enable automated publishing until API access, permissions, and approval workflows have been tested.
+Validate access to the existing YouTube account and clarify the Facebook account type later; inventory available media links and metadata, and produce a reviewable content catalog. Do not enable automated publishing until API access, permissions, and approval workflows have been tested.
 
 ## Development
 
