@@ -2,9 +2,7 @@
 
 ## 1. Vision
 
-Build an AI-assisted workspace that helps a creator turn an existing body of media into a consistently managed, measurable, and improving social media presence.
-
-The first use case is to organize and grow the Jane Kabarguina content presence using existing YouTube and Facebook material. The design should not assume that only those platforms will ever be supported.
+Build an AI-assisted business content platform for **Hidden Forest Studio** (https://hiddenforeststudio.com), where Jane Kabarguina offers lessons, classes, and workshops. The initial goal is to improve how the studio manages social content and grows awareness, website visits, interest in offerings, and business inquiries. The first social sources are YouTube and Facebook; the exact Facebook surface remains undecided. This is not a generic multi-creator SaaS product.
 
 ## 2. Users and roles
 
@@ -30,7 +28,8 @@ Role-based access is a later milestone unless multiple collaborators are require
 ### B. Media library
 - Search and filter by title, transcript, topic, date, platform, and status.
 - Store media metadata, thumbnails, transcripts, captions, and processing state.
-- Support upload of original media when platform APIs do not provide a downloadable source.
+- Default to links and metadata, not stored original media files. Optional owner-provided uploads can be considered later if processing requires them.
+- Treat video transcription and analysis as capability-dependent: a link alone does not guarantee legal or technical access to audio/video or captions.
 - Avoid duplicate imports using platform IDs and content hashes where available.
 
 ### C. AI content studio
@@ -43,7 +42,7 @@ Role-based access is a later milestone unless multiple collaborators are require
 
 ### D. Review and publishing
 - Provide a preview for each platform and format.
-- Require explicit human approval before publishing in the MVP.
+- Require explicit human approval for every publication, including scheduled content. Trust must be established before considering any change to this policy.
 - Schedule, pause, cancel, and retry publishing jobs.
 - Store remote post IDs, URLs, timestamps, and error details.
 - Make jobs idempotent to prevent duplicate posts after retries.
@@ -55,6 +54,7 @@ Role-based access is a later milestone unless multiple collaborators are require
 - Compare performance by platform, topic, format, and publication time where data supports it.
 - Explain missing or non-comparable metrics.
 - Generate recommendations with supporting observations and confidence, not unsupported certainty.
+- Where measurable, connect content outcomes to studio-specific goals such as class/workshop interest, website traffic, and inquiries.
 
 ## 4. MVP scope
 
@@ -97,8 +97,9 @@ Publishing can follow after API capability and permission validation. The MVP sh
 
 ## 8. Open product decisions
 
-- Is the first deployment local/private, or hosted from the beginning?
+- Which affordable online hosting option meets security, reliability, and budget needs? Online hosting is preferred, contingent on cost.
 - Which Facebook surface is in scope: Pages, personal profile, Groups, or a combination? Official API support differs.
-- Should original video files be copied into managed object storage, or should the first version store platform references and accept manual uploads?
+- Which media-analysis features are possible using authorized platform metadata/captions alone, and which require owner-provided files? Links and metadata are the default.
 - Which analytics are most important for the first dashboard?
 - Is the initial application single-user, or should collaborators be supported immediately?
+- Which studio business outcomes and website events can be measured without overclaiming attribution?
